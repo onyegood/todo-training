@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import SearchFrom from './components/SearchFrom'
+import ListItem from './components/ListItem'
+// import AddTodoForm from './components/AddTodoForm'
+import AddTodoFormClassComponent from './components/AddTodoFormClassComponent'
 
-function App() {
+const App = () => {
+  const handleClickable = params => {
+    console.log(params)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='Ap'>
+      <div className='container'>
+        <header className='text-center text-light my-4'>
+          <h1 className='mb-4'>Todo List</h1>
+          <SearchFrom />
+        </header>
+        <ul className='list-group todos mx-auto text-light'>
+          <ListItem
+            title='sggdhhj sjjjd'
+            status='Done'
+            clickable={handleClickable}
+            id={1}
+          />
+        </ul>
+
+        <AddTodoFormClassComponent />
+        {/* <AddTodoForm /> */}
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

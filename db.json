@@ -1,0 +1,6 @@
+{
+    "todos": [
+        { "id": 1, "title": "Create A website for FG.", "status": true },
+        { "id": 2, "title": "Do something ", "status": false }
+    ]
+}
